@@ -11,7 +11,7 @@ struct Post: Codable{
     //Codable Hace ambas al mimso tiempo
     
     var id: Int
-    var userId: String
+    var userId: Int
     var title: String
     var body: String
 }

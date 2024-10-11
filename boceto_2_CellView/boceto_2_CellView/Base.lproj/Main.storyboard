@@ -47,20 +47,42 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cCh-S9-OQZ">
-                                            <rect key="frame" x="112" y="119" width="42" height="21"/>
+                                            <rect key="frame" x="112" y="30" width="42" height="21"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="200" id="DT2-yP-8yS"/>
+                                                <constraint firstAttribute="height" constant="80" id="zAB-c9-340"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gey-XM-oBV">
+                                            <rect key="frame" x="112" y="144" width="42" height="21"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="80" id="CDh-Yc-YDl"/>
+                                                <constraint firstAttribute="width" constant="200" id="XxW-01-D3I"/>
+                                            </constraints>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
                                     <constraints>
+                                        <constraint firstItem="Gey-XM-oBV" firstAttribute="leading" secondItem="iVY-Sf-jeh" secondAttribute="leading" constant="112" id="2gL-fK-Tkm"/>
+                                        <constraint firstAttribute="trailing" secondItem="Gey-XM-oBV" secondAttribute="trailing" constant="113" id="7Lr-zT-XJY"/>
                                         <constraint firstItem="cCh-S9-OQZ" firstAttribute="centerY" secondItem="iVY-Sf-jeh" secondAttribute="centerY" id="Jlz-Vr-va4"/>
+                                        <constraint firstAttribute="bottom" secondItem="Gey-XM-oBV" secondAttribute="bottom" constant="93" id="W3I-Re-lIo"/>
                                         <constraint firstItem="cCh-S9-OQZ" firstAttribute="centerX" secondItem="iVY-Sf-jeh" secondAttribute="centerX" id="g2b-D5-wgy"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="cCh-S9-OQZ" secondAttribute="trailing" constant="105" id="jom-KV-3nI"/>
+                                        <constraint firstItem="cCh-S9-OQZ" firstAttribute="top" secondItem="iVY-Sf-jeh" secondAttribute="top" constant="30" id="lg9-Oo-jeR"/>
+                                        <constraint firstItem="cCh-S9-OQZ" firstAttribute="leading" secondItem="iVY-Sf-jeh" secondAttribute="leading" constant="112" id="oQR-q7-j7x"/>
+                                        <constraint firstItem="Gey-XM-oBV" firstAttribute="top" secondItem="cCh-S9-OQZ" secondAttribute="bottom" constant="140" id="oqR-cW-17i"/>
                                     </constraints>
                                 </collectionViewCellContentView>
                                 <color key="backgroundColor" systemColor="systemGreenColor"/>
                                 <size key="customSize" width="267" height="258"/>
                                 <connections>
+                                    <outlet property="cuerpo" destination="Gey-XM-oBV" id="t86-h2-iQc"/>
                                     <outlet property="etiqueta" destination="cCh-S9-OQZ" id="oWo-Rs-pck"/>
                                 </connections>
                             </collectionViewCell>
@@ -79,7 +101,7 @@
     </scenes>
     <resources>
         <systemColor name="systemGreenColor">
-            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="viewFlipsideBackgroundColor">
             <color red="0.12156862745098039" green="0.12941176470588237" blue="0.14117647058823529" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

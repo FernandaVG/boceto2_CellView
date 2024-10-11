@@ -23,21 +23,26 @@ class ControladorPantallaPrincipalDeColeccion: UICollectionViewController {
         let ubicacion = URL(string: url_de_publicaciones)!
         URLSession.shared.dataTask(with: ubicacion) {
             (datos, respuesta, error) in do {
+               
                 if let publicaciones_recibidas = datos{
                     let prueba_de_interpretacion_de_datos = try JSONDecoder().decode([Post].self, from: publicaciones_recibidas)
+                    
+                    self.lista_de_publicaciones = prueba_de_interpretacion_de_datos
+                    
                     DispatchQueue.main.async {
-                        self.lista_de_publicaciones = prueba_de_interpretacion_de_datos
+                        self.collectionView.reloadData()
                     }
+                    
                 }
+                
                 else{
-                    print("No se recibió información")
+                    print((respuesta as? URLResponse).debugDescription)
                 }
+                
             } catch {
-                print("Error")
+                print(error)
             }
         }.resume()
-        
-        print(lista_de_publicaciones)
     }
 
 
@@ -48,7 +53,6 @@ class ControladorPantallaPrincipalDeColeccion: UICollectionViewController {
         //self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: identificador_de_celda)
 
         // Do any additional setup after loading the view.
-    }
 
     /*
     // MARK: - Navigation
@@ -62,33 +66,36 @@ class ControladorPantallaPrincipalDeColeccion: UICollectionViewController {
 
     // MARK: UICollectionViewDataSource
 
-func numberOfSections(in collectionView: UICollectionView) -> Int {
+    override func numberOfSections(in collectionView: UICollectionView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 2
+        return 1
     }
 
 
-func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+    override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of items
-        return 5 + 5
+        return self.lista_de_publicaciones.count
     }
 
     
     //Funcion para identificar y crear cada una de las celdas creadas en el Controller
-func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+    override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let celda: VistaDeZelda = collectionView.dequeueReusableCell(withReuseIdentifier: identificador_de_celda, for: indexPath) as! VistaDeZelda
     
         // Configure the cell
         celda.backgroundColor = UIColor.green
         
         celda.etiqueta.text = "\(indexPath)"
+        celda.etiqueta.text = self.lista_de_publicaciones[indexPath.item].title
+        celda.etiqueta.text = self.lista_de_publicaciones[indexPath.item].body
     
         return celda
     }
     
-func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         print("Se seleccionó la celda \(indexPath)")
     }
+}
 
     // MARK: UICollectionViewDelegate
 

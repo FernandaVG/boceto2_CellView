@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FB2F62C62CB984E800782E40 /* EstiloCellViewCntrollerCelular.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB2F62C52CB984E800782E40 /* EstiloCellViewCntrollerCelular.swift */; };
 		FBA115122CB4338C00374E7C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA115112CB4338C00374E7C /* AppDelegate.swift */; };
 		FBA115142CB4338C00374E7C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA115132CB4338C00374E7C /* SceneDelegate.swift */; };
 		FBA115192CB4338C00374E7C /* Base in Resources */ = {isa = PBXBuildFile; fileRef = FBA115182CB4338C00374E7C /* Base */; };
@@ -38,6 +39,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		FB2F62C52CB984E800782E40 /* EstiloCellViewCntrollerCelular.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EstiloCellViewCntrollerCelular.swift; sourceTree = "<group>"; };
 		FBA1150E2CB4338C00374E7C /* boceto_2_CellView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = boceto_2_CellView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FBA115112CB4338C00374E7C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FBA115132CB4338C00374E7C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -80,6 +82,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FB2F62C42CB984C200782E40 /* estilos */ = {
+			isa = PBXGroup;
+			children = (
+				FB2F62C52CB984E800782E40 /* EstiloCellViewCntrollerCelular.swift */,
+			);
+			path = estilos;
+			sourceTree = "<group>";
+		};
 		FBA115052CB4338C00374E7C = {
 			isa = PBXGroup;
 			children = (
@@ -103,6 +113,7 @@
 		FBA115102CB4338C00374E7C /* boceto_2_CellView */ = {
 			isa = PBXGroup;
 			children = (
+				FB2F62C42CB984C200782E40 /* estilos */,
 				FBEF62C42CB6D8D8005228A5 /* modelos */,
 				FBA115412CB4368000374E7C /* controladores_de_pantallas */,
 				FBA115112CB4338C00374E7C /* AppDelegate.swift */,
@@ -291,6 +302,7 @@
 				FBA115122CB4338C00374E7C /* AppDelegate.swift in Sources */,
 				FBA115142CB4338C00374E7C /* SceneDelegate.swift in Sources */,
 				FBEF62C62CB6D8FB005228A5 /* posts.swift in Sources */,
+				FB2F62C62CB984E800782E40 /* EstiloCellViewCntrollerCelular.swift in Sources */,
 				FBA115462CB43D3100374E7C /* VistaDeZeldaCollectionViewCell.swift in Sources */,
 				FBA115442CB4375D00374E7C /* ControladorPantallaPrincipalDeColeccion.swift in Sources */,
 			);
