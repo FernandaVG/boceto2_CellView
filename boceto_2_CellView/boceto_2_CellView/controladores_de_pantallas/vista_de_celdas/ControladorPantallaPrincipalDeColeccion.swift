@@ -83,7 +83,7 @@ class ControladorPantallaPrincipalDeColeccion: UICollectionViewController {
         let celda: VistaDeZelda = collectionView.dequeueReusableCell(withReuseIdentifier: identificador_de_celda, for: indexPath) as! VistaDeZelda
     
         // Configure the cell
-        celda.backgroundColor = UIColor.green
+        celda.backgroundColor = UIColor.systemPink
         
         celda.etiqueta.text = "\(indexPath)"
         celda.etiqueta.text = self.lista_de_publicaciones[indexPath.item].title
@@ -94,6 +94,17 @@ class ControladorPantallaPrincipalDeColeccion: UICollectionViewController {
     
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         print("Se seleccionó la celda \(indexPath)")
+        
+        let pantalla_de_publicacion = storyboard?.instantiateViewController(withIdentifier: "PantallaPublicacion") as! ControladorPantallaDelPost
+        
+        pantalla_de_publicacion.id_publicacion = self.lista_de_publicaciones[indexPath.item].id
+        //pantalla_de_publicacion.id_publicacion = indexPath.item
+        
+        self.navigationController?.pushViewController(pantalla_de_publicacion, animated: true)
+
+        
+        //self.navigationController?.pushViewController(pantalla_de_publicacion, animated: true)
+        //print(self.navigationController)
     }
 }
 
