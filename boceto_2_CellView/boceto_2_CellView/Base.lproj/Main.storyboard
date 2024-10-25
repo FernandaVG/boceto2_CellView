@@ -118,7 +118,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="ubz-Jl-zLO">
-                                <rect key="frame" x="76" y="309" width="282.66666666666669" height="493"/>
+                                <rect key="frame" x="76.000000000000014" y="309" width="184.33333333333337" height="493"/>
                                 <color key="backgroundColor" red="0.84705877299999999" green="0.5411764979" blue="0.19215688110000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="qEe-Oj-N8P">
                                     <size key="itemSize" width="128" height="128"/>
@@ -128,10 +128,10 @@
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="xUQ-Za-zlX">
-                                        <rect key="frame" x="0.0" y="0.0" width="128.00000000000003" height="128"/>
+                                        <rect key="frame" x="28" y="0.0" width="128.00000000000006" height="128"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="owQ-qn-ypo">
-                                            <rect key="frame" x="0.0" y="0.0" width="128.00000000000003" height="128"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="128.00000000000006" height="128"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </collectionViewCellContentView>
                                         <color key="backgroundColor" systemColor="systemBrownColor"/>
@@ -179,7 +179,7 @@
                     </view>
                     <connections>
                         <outlet property="nombre_usuario" destination="qQp-bI-Lm7" id="tik-uw-Pyr"/>
-                        <outlet property="seccion_comentarios" destination="xUQ-Za-zlX" id="fmg-jD-JEx"/>
+                        <outlet property="seccion_comentarios" destination="ubz-Jl-zLO" id="W5M-5u-6nQ"/>
                         <outlet property="texto_publicacion" destination="Yfu-4h-aax" id="ZAy-F7-cg6"/>
                         <outlet property="titulo_publicacion" destination="bUo-S5-laA" id="ke1-Id-ifn"/>
                     </connections>
@@ -194,10 +194,10 @@
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemBrownColor">
-            <color red="0.63529411759999999" green="0.51764705879999995" blue="0.36862745099999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.63529411764705879" green="0.51764705882352946" blue="0.36862745098039218" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemGreenColor">
-            <color red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="viewFlipsideBackgroundColor">
             <color red="0.12156862745098039" green="0.12941176470588237" blue="0.14117647058823529" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
