@@ -78,22 +78,22 @@ class ControladorPantallaPrincipalDeColeccion: UICollectionViewController {
     }
 
     
-    //Funcion para identificar y crear cada una de las celdas creadas en el Controller
+    //Funcion para identificar y creartitle cada una de las celdas creadas en el Controller
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let celda: VistaDeZelda = collectionView.dequeueReusableCell(withReuseIdentifier: identificador_de_celda, for: indexPath) as! VistaDeZelda
     
         // Configure the cell
         celda.backgroundColor = UIColor.systemPink
         
-        celda.etiqueta.text = "\(indexPath)"
+        //celda.etiqueta.text = "\(indexPath)"
         celda.etiqueta.text = self.lista_de_publicaciones[indexPath.item].title
-        celda.etiqueta.text = self.lista_de_publicaciones[indexPath.item].body
+        celda.cuerpo.text = self.lista_de_publicaciones[indexPath.item].body
     
         return celda
     }
     
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        print("Se seleccionó la celda \(indexPath)")
+        print("Se seleccionó la celda\(indexPath)")
         
         let pantalla_de_publicacion = storyboard?.instantiateViewController(withIdentifier: "PantallaPublicacion") as! ControladorPantallaDelPost
         
