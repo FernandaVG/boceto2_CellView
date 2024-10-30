@@ -95,7 +95,7 @@ class ProveedorDePublicaciones{
     
     func obtener_comentarios(id: Int, que_hacer_al_recibir: @escaping ([Comentario]) -> Void) {
         // func obtener_publicaicones() async throws -> [Publicacion] {
-        let ubicacion = URL(string: "\(url_de_publicaciones)post/\(id)/comments")!
+        let ubicacion = URL(string: "\(url_de_publicaciones)posts/\(id)/comments")!
         URLSession.shared.dataTask(with: ubicacion) {
             (datos, respuesta, error) in do {
                 if let publicaciones_recibidas = datos{
