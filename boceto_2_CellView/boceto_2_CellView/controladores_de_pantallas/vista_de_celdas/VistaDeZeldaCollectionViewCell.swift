@@ -12,4 +12,9 @@ class VistaDeZelda: UICollectionViewCell {
     @IBOutlet weak var etiqueta: UILabel!
     
     @IBOutlet weak var cuerpo: UILabel!
+    
+    @IBOutlet weak var autor_coment: UILabel!
+    
+    @IBOutlet weak var comentario_publi: UILabel!
+    
 }

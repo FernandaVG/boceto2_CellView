@@ -135,14 +135,44 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CeldaComentario" id="xUQ-Za-zlX">
-                                        <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CeldaComentario" id="xUQ-Za-zlX" customClass="VistaDeZelda" customModule="boceto_2_CellView" customModuleProvider="target">
+                                        <rect key="frame" x="-5.666666666666667" y="0.0" width="372" height="128"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="owQ-qn-ypo">
-                                            <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="372" height="128"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Autor" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gYW-kX-c5b">
+                                                    <rect key="frame" x="51" y="18" width="270.33333333333331" height="12"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Comentario" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="20" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g4I-lO-eyl">
+                                                    <rect key="frame" x="14" y="68" width="300" height="12"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="300" id="xM6-p3-ZCG"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="g4I-lO-eyl" secondAttribute="trailing" constant="58" id="8Yh-yo-SWO"/>
+                                                <constraint firstItem="gYW-kX-c5b" firstAttribute="leading" secondItem="owQ-qn-ypo" secondAttribute="leading" constant="51" id="Ct6-lF-dsu"/>
+                                                <constraint firstAttribute="trailing" secondItem="gYW-kX-c5b" secondAttribute="trailing" constant="50.666666666666657" id="PEf-Mo-VHW"/>
+                                                <constraint firstItem="g4I-lO-eyl" firstAttribute="leading" secondItem="owQ-qn-ypo" secondAttribute="leading" constant="14" id="Qyj-yQ-fAU"/>
+                                                <constraint firstItem="gYW-kX-c5b" firstAttribute="top" secondItem="owQ-qn-ypo" secondAttribute="top" constant="18" id="VwG-K7-dhT"/>
+                                                <constraint firstItem="g4I-lO-eyl" firstAttribute="top" secondItem="gYW-kX-c5b" secondAttribute="bottom" constant="38" id="c8f-zw-IYS"/>
+                                                <constraint firstAttribute="bottom" secondItem="g4I-lO-eyl" secondAttribute="bottom" constant="48" id="nre-oh-YRL"/>
+                                            </constraints>
                                         </collectionViewCellContentView>
                                         <color key="backgroundColor" red="0.94328010082244873" green="0.67014588265165909" blue="0.74864497661324803" alpha="0.76958439625850339" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <connections>
+                                            <outlet property="autor_coment" destination="gYW-kX-c5b" id="aYg-Gs-ctH"/>
+                                            <outlet property="comentario_publi" destination="g4I-lO-eyl" id="FVw-DU-Ro5"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
